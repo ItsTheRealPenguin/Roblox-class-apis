@@ -4,7 +4,7 @@
     
     made by
     * itspenguin.
-    * last updated 04/28/24
+    * last updated 05/01/24
 ]]
 --// Services
 local Players = game:GetService("Players")
@@ -70,6 +70,12 @@ function PlayerService:GetAge(): number
 end
 function PlayerService:FakeAge(age: number)
     self.Player:SetAccountAge(age)
+end
+function PlayerService:GetMouse(): Mouse
+    return self:GetPlayer():GetMouse()
+end
+function PlayerService:GetPlayerGui(): PlayerGui?
+    return self:GetPlayer():WaitForChild("PlayerGui")
 end
 
 
